@@ -1,17 +1,10 @@
 import { useSelector, useDispatch } from "react-redux";
 import { login, logout } from "../features/auth/AuthSlice";
 import { setThemeDark, setThemeLight } from "../features/theme/themeSlice";
+
 const Home = () => {
   const isLoggedIn = useSelector((state) => state.auth);
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
   const theme = useSelector((state) => state.theme);
-=======
-  const theme = useSelector((state)=> state.theme);
->>>>>>> Stashed changes
-=======
-  const theme = useSelector((state)=> state.theme);
->>>>>>> Stashed changes
   const dispatch = useDispatch();
 
   return (
@@ -27,7 +20,9 @@ const Home = () => {
       ) : (
         <button onClick={() => dispatch(login())}>Login</button>
       )}
+
       <h2>{theme}</h2>
+
       {theme === "light" ? (
         <button onClick={() => dispatch(setThemeDark())}>dark mode</button>
       ) : (
