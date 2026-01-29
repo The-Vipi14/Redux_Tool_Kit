@@ -3,7 +3,15 @@ import { login, logout } from "../features/auth/AuthSlice";
 import { setThemeDark, setThemeLight } from "../features/theme/themeSlice";
 const Home = () => {
   const isLoggedIn = useSelector((state) => state.auth);
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
   const theme = useSelector((state) => state.theme);
+=======
+  const theme = useSelector((state)=> state.theme);
+>>>>>>> Stashed changes
+=======
+  const theme = useSelector((state)=> state.theme);
+>>>>>>> Stashed changes
   const dispatch = useDispatch();
 
   return (
