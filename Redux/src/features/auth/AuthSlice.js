@@ -7,7 +7,7 @@ const authSlice = createSlice({
     login: (state) => true,
     logout: (state) => false,
   },
-}); 
+});  
 
 export const {login, logout} = authSlice.actions;
 
