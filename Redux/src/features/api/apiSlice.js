@@ -5,6 +5,6 @@ export const usersData = createAsyncThunk(
     "users/usersData",
     async () => {
         const response = await axios.get("https://jsonplaceholder.typicode.com/users");
-        return response;
+        return response.data;
     }
 );
