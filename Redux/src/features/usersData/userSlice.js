@@ -15,11 +15,11 @@ const usersSlice = createSlice({
                 state.loading = true;
                 state.error = null
             })
-            .addCase(usersData.fulfilled, (state) => {
+            .addCase(usersData.fulfilled, (state,action) => {
                 state.loading = false;
                 state.users = action.payload
             })
-            .addCase(usersData.rejected, (state) => {
+            .addCase(usersData.rejected, (state , action) => {
                 state.loading = false;
                 state.error = action.error.message;
             });
